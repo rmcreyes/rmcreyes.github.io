@@ -1,5 +1,16 @@
 body {
-    background-color: #ffb366;
+    /* background-color: #ffa64d; */
+    background-image: url("../img/funky-lines.jpg");
+}
+
+p {
+    text-align: justify;
+    line-height: 26pt;
+}
+
+#intro {
+    background-color: rgba(52, 78, 105, 0.5);
+    padding-bottom: 100px;
 }
 
 .social_link {
@@ -11,7 +22,7 @@ body {
     min-width: 40px;
     height: width;
     padding-top: 20px;
-    padding-bottom: 10px;
+    padding-bottom:10px;
     padding-left: 1vw;
     opacity:1;
 	transition-duration: 0.3s;
@@ -20,4 +31,39 @@ body {
 .social_icon:hover {
     opacity:0.3;
     transition-duration: 0.3s;
+}
+
+#madewithlove {
+    background-image: url("../img/funky-lines.jpg");
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: black;
+    padding: 3px;
+    padding-left: 1vw;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    color: white;
+    padding-left: 2vw;
+    padding-top: 10vw;
+    font-size: 5vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+#bio {
+    color: white;
+    padding-left: 2vw;
+    font-size: 2vw;
+    max-width: 1000px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+#name {
+    color: black;
+    background-image: url("../img/funky-lines.jpg");
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
 }
