@@ -8,10 +8,12 @@
     <meta name="author" content="Roberto Martin Reyes">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link href="./css/css-circular-prog-bar.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <div id=intro>
+    <div id=intro-div>
         <a class="social_link" href="https://www.linkedin.com/in/roberto-martin-reyes-a29884162/">
             <img class="social_icon" src="./img/linkedin-logo.png" alt="LinkedIn link">
         </a>
@@ -22,7 +24,7 @@
         <br>
         <span id=madewithlove>made with <span style="color: red">♥</span></span>
         
-        <h1>My name is Roberto Martin Reyes,</h1>
+        <h1 id=title>My name is Roberto Martin Reyes,</h1>
         <p id=bio>
             but my friends call me <span id=name>Robin</span>. I'm a computer engineering student at UBC, currently in my third year, and I
             am entheusiastic about the projects I create whether on my own or with a team. I am passionate about software development,
@@ -30,6 +32,10 @@
         </p>
     </div>
     
-    
+    <span class=heading>Language Proficiency</span>
+    <br>
+
+    <canvas id="counter" height=100 width=100></canvas>
+    <script type="application/javascript" src="./js/progressbar.js"></script>
 </body>
 </html>
