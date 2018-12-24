@@ -1,5 +1,5 @@
 var progressbars = document.getElementsByClassName('progressbar');
-var proficiencies = [80, 75, 60, 50, 50, 60, 65, 50, 50];
+var proficiencies = [80, 75, 60, 35, 50, 60, 65, 40, 40];
 
 function fillProgressbar(progressbar, proficiency) {
     var point_to_fill = 0;
