@@ -73,14 +73,27 @@ p {
     padding-right: 5px;
 }
 
-#counter{
-    /* background-color: red; */
-    /* position: absolute; */
-    /* top:50%; */
-    /* left: 50%; */
-    /* transform: translate(-50%,-50%); */
-    /* z-index: 9; */
-    margin-top: 30px;
+.language_proficiency {
+    text-align: center;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+.language {
+    color: black;
+    margin: 0 auto;
+    text-align: center;
+    size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.progressbar {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
 }
 
 .heading, #title, #bio {

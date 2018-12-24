@@ -1,42 +1,46 @@
-        var counter = document.getElementById('counter').getContext('2d');
-        var no = 0; // Starting Point
-        var pointToFill = 4.72;  //Point from where you want to fill the circle
-        var cw = counter.canvas.width;  //Return canvas width
-        var ch = counter.canvas.height; //Return canvas height
-        var centre_x = cw / 2;
-        var centre_y = ch / 2;
-        var diff;   // find the different between current value (no) and trageted value (100)
+// var progressbars = document.getElementsByClassName("progressbar");
+// var progressbaryeah = document.getElementById('counter').getContext('2d');
+var progressbars = document.getElementsByClassName('progressbar');
+var proficiencies = [80, 70, 60];
 
-        function fillCounter() {
-            diff = ((no / 100) * Math.PI * 2 * 10);
+function fillProgressbar(progressbar, proficiency) {
+    var point_to_fill = 0;
+    var starting_point = 4.72;
+    var canvas_width = progressbar.canvas.width;
+    var canvas_height = progressbar.canvas.height;
+    var center_x = canvas_width / 2;
+    var center_y = canvas_height / 2;
+    var prof = proficiency;
 
-            counter.clearRect(0, 0, cw, ch);   // Clear canvas every time when function is call
+    var diff;
 
-            counter.lineWidth = 10;     // size of stroke
+    function fillProgressbarHelper() {
+        diff = ((point_to_fill / 100) * Math.PI * 2 * 10);
 
-            counter.fillStyle = 'rgb(52, 78, 105)';     // color that you want to fill in counter/circle
+        progressbar.clearRect(0, 0, canvas_width, canvas_height);
+        progressbar.lineWidth = 10;
+        progressbar.fillStyle = 'rgb(52, 78, 105)';
+        progressbar.strokeStyle = 'rgb(52, 78, 105)';
+        progressbar.textAlign = 'center';
+        progressbar.font = "15px monospace";
+        progressbar.fillText(point_to_fill + '%', center_x, center_y);
+        progressbar.beginPath();
+        progressbar.arc(center_x, center_y, center_x - 20, starting_point, diff / 10 + starting_point);
+        progressbar.stroke();
 
-            counter.strokeStyle = 'rgb(52, 78, 105)';    // Stroke Color
-
-            counter.textAlign = 'center';
-
-            counter.font = "15px monospace";    //set font size and face
-
-            counter.fillText(no + '%', centre_x, centre_y);       //fillText(text,x,y);
-
-            counter.beginPath();
-            counter.arc(centre_x, centre_y, centre_x - 20, pointToFill, diff / 10 + pointToFill);    //arc(x,y,radius,start,stop)
-
-            counter.stroke();   // to fill stroke
-
-            // now add condition
-
-            if (no >= 80) {
-                clearTimeout(fill);     //fill is a variable that call the function fillcounter()
-            }
-            no++;
+        if(point_to_fill >= prof) {
+            clearTimeout(fill);
         }
+            
+        
+        point_to_fill++;
+    }
 
-        //now call the function
+    var fill = setInterval(fillProgressbarHelper, 8);
 
-        var fill = setInterval(fillCounter, 8);     //call the fillCounter function after every 50MS
+}
+
+var i;
+for(i = 0; i < progressbars.length; i++) {
+    fillProgressbar(progressbars[i].getContext('2d'), 70);
+}
