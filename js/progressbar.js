@@ -1,7 +1,5 @@
-// var progressbars = document.getElementsByClassName("progressbar");
-// var progressbaryeah = document.getElementById('counter').getContext('2d');
 var progressbars = document.getElementsByClassName('progressbar');
-var proficiencies = [80, 70, 60];
+var proficiencies = [80, 75, 60, 50, 50, 60, 65, 50, 50];
 
 function fillProgressbar(progressbar, proficiency) {
     var point_to_fill = 0;
@@ -23,7 +21,7 @@ function fillProgressbar(progressbar, proficiency) {
         progressbar.strokeStyle = 'rgb(52, 78, 105)';
         progressbar.textAlign = 'center';
         progressbar.font = "15px monospace";
-        progressbar.fillText(point_to_fill + '%', center_x, center_y);
+        progressbar.fillText(point_to_fill + '%', center_x, center_y+3);
         progressbar.beginPath();
         progressbar.arc(center_x, center_y, center_x - 20, starting_point, diff / 10 + starting_point);
         progressbar.stroke();
@@ -42,5 +40,5 @@ function fillProgressbar(progressbar, proficiency) {
 
 var i;
 for(i = 0; i < progressbars.length; i++) {
-    fillProgressbar(progressbars[i].getContext('2d'), 70);
+    fillProgressbar(progressbars[i].getContext('2d'), proficiencies[i]);
 }
