@@ -55,7 +55,7 @@ function inView(elem) {
 }
 
 function fillWhenScrolled() {
-    if (inView($("#last_language")) && !filled) {
+    if (inView($("#first_language")) && !filled) {
         fillProgressbars();
         filled = true;
     }
