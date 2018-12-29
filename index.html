@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link href="./css/css-circular-prog-bar.css" rel="stylesheet">
-
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 </head>
 
 <body>
@@ -21,9 +21,6 @@
             <img class="social_icon" src="./img/github-logo.png" alt="GitHub link">
         </a>
 
-        <!-- <br>
-        <span id=madewithlove>made with <span style="color: red">♥</span></span> -->
-        
         <h1 id=title>My name is Roberto Martin Reyes,</h1>
         <p id=bio>
             but my friends call me <span id=name>Robin</span>. I'm a computer engineering student at UBC, currently in my third year, and I
@@ -35,7 +32,46 @@
     <span class=heading>Language Proficiency</span>
     <br>
 
-    <div class="language_proficiency">
+    <div class="proficiencies">
+        <div class="language_proficiency">
+            <span class="language">Java</span>
+            <canvas class="progressbar" height=125 width=125></canvas>
+        </div>
+        <div class="language_proficiency">
+            <span class="language">C</span>
+            <canvas class="progressbar" height=125 width=125></canvas>
+        </div>
+        <div class="language_proficiency">
+            <span class="language">C++</span>
+            <canvas class="progressbar" height=125 width=125></canvas>
+        </div>
+        <div class="language_proficiency">
+            <span class="language">C#</span>
+            <canvas class="progressbar" height=125 width=125></canvas>
+        </div>
+        <div class="language_proficiency">
+            <span class="language">Javascript</span>
+            <canvas class="progressbar" height=125 width=125></canvas>
+        </div>
+        <div class="language_proficiency">
+            <span class="language">Python</span>
+            <canvas class="progressbar" height=125 width=125></canvas>
+        </div>
+        <div class="language_proficiency">
+            <span class="language">Verilog</span>
+            <canvas class="progressbar" height=125 width=125></canvas>
+        </div>
+        <div class="language_proficiency">
+            <span class="language">HTML</span>
+            <canvas class="progressbar" height=125 width=125></canvas>
+        </div>
+        <div class="language_proficiency last_language">
+            <span class="language">CSS</span>
+            <canvas class="progressbar" height=125 width=125></canvas>
+        </div>
+    </div>
+
+    <!-- <div class="language_proficiency">
         <span class="language">Java</span>
         <canvas class="progressbar" height=125 width=125></canvas>
     </div>
@@ -70,7 +106,7 @@
     <div class="language_proficiency">
         <span class="language">CSS</span>
         <canvas class="progressbar" height=125 width=125></canvas>
-    </div>
+    </div> -->
 
     <script type="application/javascript" src="./js/progressbar.js"></script>
 </body>

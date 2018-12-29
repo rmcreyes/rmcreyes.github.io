@@ -1,5 +1,12 @@
-var progressbars = document.getElementsByClassName('progressbar');
-var proficiencies = [80, 75, 60, 35, 50, 60, 65, 40, 40];
+var filled = false;
+function fillProgressbars() {
+    var progressbars = document.getElementsByClassName('progressbar');
+    var proficiencies = [80, 75, 60, 35, 50, 60, 65, 40, 40];
+    var i;
+    for (i = 0; i < progressbars.length; i++) {
+        fillProgressbar(progressbars[i].getContext('2d'), proficiencies[i]);
+    }
+}
 
 function fillProgressbar(progressbar, proficiency) {
     var point_to_fill = 0;
@@ -35,10 +42,24 @@ function fillProgressbar(progressbar, proficiency) {
     }
 
     var fill = setInterval(fillProgressbarHelper, 8);
-
 }
 
-var i;
-for(i = 0; i < progressbars.length; i++) {
-    fillProgressbar(progressbars[i].getContext('2d'), proficiencies[i]);
+function inView(elem) {
+    var view_top = $(window).scrollTop();
+    var view_bottom = view_top + $(window).height();
+
+    var elem_top = $(elem).offset().top;
+    var elem_bottom = elem_top + $(elem).height();
+
+    return ((elem_bottom <= view_bottom) && (elem_top >= view_top));
 }
+
+function fillWhenScrolled() {
+    if (inView($(".last_language")) && !filled) {
+        fillProgressbars();
+        filled = true;
+    }
+}
+
+$(fillWhenScrolled);
+$(window).scroll(fillWhenScrolled);
