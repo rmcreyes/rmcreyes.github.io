@@ -1,4 +1,4 @@
-function inView(elem) {
+function isInView(elem) {
     var view_top = $(window).scrollTop();
     var view_bottom = view_top + $(window).height();
 

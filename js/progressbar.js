@@ -45,7 +45,7 @@ function fillProgressbar(progressbar, proficiency) {
 }
 
 function fillWhenScrolled() {
-    if (inView($("#first_language")) && !filled) {
+    if (isInView($("#first_language")) && !filled) {
         fillProgressbars();
         filled = true;
     }
