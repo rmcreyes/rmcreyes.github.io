@@ -1,5 +1,6 @@
-body, #madewithlove {
+body {
     background-image: url("../img/funky-lines.jpg");
+    margin: 0px;
 }
 
 p {
@@ -40,15 +41,6 @@ p {
 
 .social_icon:hover {
     opacity:0.3;
-}
-
-#madewithlove {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    color: black;
-    padding: 3px;
-    padding-left: 1vw;
-    font-family: 'Courier New', Courier, monospace;
 }
 
 #title {
