@@ -6,9 +6,8 @@ function fillProgressbars() {
     var progressbars = document.getElementsByClassName('progressbar');
     var proficiencies = [80, 75, 60, 35, 50, 60, 65, 40, 40];
     var i;
-    for (i = 0; i < progressbars.length; i++) {
+    for (i = 0; i < progressbars.length; i++)
         fillProgressbar(progressbars[i].getContext('2d'), proficiencies[i]);
-    }
 }
 
 function fillProgressbar(progressbar, proficiency) {
@@ -36,12 +35,10 @@ function fillProgressbar(progressbar, proficiency) {
         progressbar.arc(center_x, center_y, center_x - 20, starting_point, diff / 10 + starting_point);
         progressbar.stroke();
 
-        if(point_to_fill >= prof) {
+        if(point_to_fill >= prof)
             clearTimeout(fill);
-        }
-            
         
-        point_to_fill++;
+            point_to_fill++;
     }
 
     var fill = setInterval(fillProgressbarHelper, 8);
