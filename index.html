@@ -8,7 +8,6 @@
     <meta name="author" content="Roberto Martin Reyes">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <link href="./css/css-circular-prog-bar.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 </head>
 
@@ -70,5 +69,11 @@
     </div>
 
     <script type="application/javascript" src="./js/progressbar.js"></script>
+    <script type="application/javascript" src="./js/inview.js"></script>
+    <script language="javascript">
+        var filled = false;
+        $(fillWhenScrolled);
+        $(window).scroll(fillWhenScrolled);
+    </script>
 </body>
 </html>
