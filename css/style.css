@@ -112,7 +112,7 @@ h2, #title, #bio {
     border: none;
     text-align: left;
     outline: none;
-    font-size: 20px;
+    font-size: 23px;
     transition-duration: 0.3s;
 }
 
@@ -153,6 +153,7 @@ h2, #title, #bio {
 
 .vertical_project_description p, .horizontal_project_description p {
     color: rgb(21, 36, 51);
+    font-size: 20px;
 }
 
 .vertical_project_images img {
