@@ -5,7 +5,7 @@ body {
 
 p {
     text-align: justify;
-    line-height: 26pt;
+    line-height: 30pt;
 }
 
 h2 {
@@ -89,7 +89,7 @@ h2 {
     display: block;
 }
 
-h2, #title, #bio {
+h2, #title, .collapsible, p {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -103,19 +103,22 @@ h2, #title, #bio {
 
 
 .collapsible {
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
+    background-color: rgb(52, 78, 105);
+    opacity: 0.9;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+    transition-duration: 0.3s;
 }
 
 .active, .collapsible:hover {
-  background-color: #555;
+    opacity: 1;
+    transition-duration: 0.3s;
 }
 
 .content {
@@ -123,5 +126,30 @@ h2, #title, #bio {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
+  background-color: rgba(52, 78, 105, 0.5);
+}
+
+.content:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.project_description, .project_images {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.project_description p {
+    color: rgb(21, 36, 51);
+}
+
+.project_images img {
+    margin: 10px;
+    width: 95%;
 }
