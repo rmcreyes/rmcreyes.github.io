@@ -139,17 +139,28 @@ h2, #title, #bio {
     box-sizing: border-box;
 }
 
-.project_description, .project_images {
+.vertical_project_description, .vertical_project_images {
     float: left;
     width: 50%;
     padding: 10px;
 }
 
-.project_description p {
+.horizontal_project_description, .horizontal_project_images {
+    float: left;
+    height: 50%;
+    padding: 10px;
+}
+
+.vertical_project_description p, .horizontal_project_description p {
     color: rgb(21, 36, 51);
 }
 
-.project_images img {
+.vertical_project_images img {
     margin: 10px;
     width: 95%;
+}
+
+.horizontal_project_images img {
+    margin:10px;
+    width: 45%;
 }
